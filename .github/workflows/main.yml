@@ -20,10 +20,12 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
+          cache: 'gradle'
 
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '3.0.0'
+          cache: true
 
       - run: flutter pub get
       #- run: flutter analyze .
